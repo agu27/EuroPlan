@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#0f172a" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="manifest" href="/manifest.json" />
+    <link rel="manifest" href="manifest.json" />
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/201/201623.png" />
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,9 +29,9 @@
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
     "react/": "https://esm.sh/react@^19.2.3/",
     "recharts": "https://esm.sh/recharts@^3.6.0",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
     "vite": "https://esm.sh/vite@^7.3.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
@@ -39,13 +39,13 @@
   <body>
     <div id="root"></div>
     
-    <!-- Vite detectará automáticamente este archivo .tsx y lo transpilará -->
+    <!-- Vite resolverá automáticamente las dependencias instaladas con npm install -->
     <script type="module" src="/index.tsx"></script>
 
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js').catch(err => {
+          navigator.serviceWorker.register('sw.js').catch(err => {
             console.log('SW registration failed: ', err);
           });
         });
