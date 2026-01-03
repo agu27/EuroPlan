@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   // IMPORTANTE: Cambia 'eurotravel' por el nombre exacto de tu repositorio en GitHub
-  base: '/eurotravel/',
+  base: '/EuroPlan/',
   server: {
     port: 5173,
     host: true

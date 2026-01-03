@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#0f172a" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="/EuroPlan/assets/manifest-TNNA910-.json" />
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/201/201623.png" />
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,6 +23,7 @@
       .animate-fade-in { animation: fadeIn 0.5s ease-out; }
       @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     </style>
+
   <script type="importmap">
 {
   "imports": {
@@ -36,12 +37,12 @@
   }
 }
 </script>
+  <script type="module" crossorigin src="/EuroPlan/assets/index-D7i5TdUh.js"></script>
 </head>
   <body>
     <div id="root"></div>
     
     <!-- Cambiado a ruta relativa sin el / inicial para que Vite lo maneje bien en subcarpetas -->
-    <script type="module" src="index.tsx"></script>
 
     <script>
       if ('serviceWorker' in navigator) {
