@@ -45,6 +45,10 @@ const App: React.FC = () => {
     }
   };
 
+  const reorderItems = (segmentId: string, items: TripItem[]) => {
+    setSegments(prev => prev.map(seg => seg.id === segmentId ? { ...seg, items } : seg));
+  };
+
   // Funciones de Respaldo (Críticas para App Local)
   const exportData = () => {
     const dataStr = JSON.stringify(segments, null, 2);
@@ -97,6 +101,7 @@ const App: React.FC = () => {
             onUpdateItem={updateItem}
             onDeleteItem={deleteItem}
             onDeleteSegment={deleteSegment}
+            onReorderItems={reorderItems}
           />
         )}
         {activeTab === 'table' && <BudgetTable segments={segments} />}
